@@ -19,14 +19,14 @@ const server = http.createServer((req, res) => {
     res.write('</form>');
    
 
-     res.write('</body');
+     res.write('</body>');
     res.write('</html>');
     return res.end();
   }
   else if (req.url.toLocaleLowerCase () === "/submit-details" && req.method =="POST"){
    
     const body = [];
-    req.on("data",(chunk) => {
+    req.on("data",(chunk ) => {
       console.log(chunk);
       body.push(chunk);
     });
